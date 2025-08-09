@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <!-- HEADER DESIGN-->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hi, Myself</h3>
+        <h1>Swarandip Mandal</h1>
+        <h3>And I'm a <span>Software Developer</span></h3>
+        <p>
+          I am a passionate Computer Science student with experience in programming, web development, and database management. I enjoy building modern, user-friendly web applications and am always eager to learn new technologies. I’m seeking opportunities to contribute my skills to real-world projects and make a positive impact through innovative IT solutions.
+        </p>
+        <div class="social-media">
+          <a href="https://github.com/Swarandip" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/invites/contact/?igsh=qr131luzdgwe&utm_content=oc5e3ms" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/swarandip-mandal-9006302b7" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="swarandip-1.pdf" class="btn" target="_blank">Download CV</a>
+      </div>
+      <div class="home-img">
+        <img src="WhatsApp Image 2025-07-23 at 21.00.13_049cfb85.jpg" alt="Profile Photo">
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="WhatsApp Image 2025-07-23 at 21.00.13_049cfb85.jpg" alt="Profile Photo">
+      </div>
+      <div class="about-content">
+        <h2 class="heading">ABOUT <span>Me</span></h2>
+        <p>
+          My name is Swarandip Mandal and I am currently pursuing a B.Tech in Computer Science and Engineering. I have a strong interest in software development, especially in creating responsive and efficient web applications. My skills include HTML, CSS, JavaScript, and experience with front-end frameworks.<br><br>
+          Beyond coding, I enjoy problem-solving and collaborating in teams to develop creative solutions. I am also familiar with database concepts and have completed multiple academic projects. My goal is to continuously improve as a developer and contribute to organizations that value innovation and growth.<br><br>
+          In my free time, I love exploring new technologies, working on personal projects, and staying updated with the latest trends in the tech industry.
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (use old class names for styling) -->
+    <section class="services" id="services">
+      <h2>My <span>Projects</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Clustering Customer Reviews for Market Research</h3>
+          <p>Clustering customer reviews helps businesses identify patterns, trends, and insights for better market research and decision-making.</p>
+          <a href="https://github.com/Swarandip/Clustering-Customer-Reviews-for-Market-Research" class="btn" target="_blank">Read More</a>
+        </div>
+        <div class="services-box">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Portfolio Website</h3>
+          <p>Developed and designed my personal portfolio site to showcase my skills, projects, and experience as a web developer.</p>
+          <a href="https://github.com/Swarandip/Portfolio-Website" class="btn">Read More</a>
+        </div>
+        <!-- Add more projects if needed -->
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="https://formsubmit.co/mandalswarandip@gmail.com" method="POST">
+        <div class="input-box">
+          <input type="text" name="fullname" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+          <input type="tel" name="mobile" placeholder="Mobile Number" required>
+          <input type="text" name="subject" placeholder="Email Subject" required>
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2025 by @Swarandip | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Hamburger menu JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuIcon = document.getElementById('menu-icon');
+      const navbar = document.querySelector('.navbar');
+      menuIcon.onclick = function() {
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-xmark');
+      };
+      // Optional: Close nav when clicking link (better mobile UX)
+      document.querySelectorAll('.navbar a').forEach(link => {
+        link.onclick = () => {
+          navbar.classList.remove('active');
+          menuIcon.classList.add('fa-bars');
+          menuIcon.classList.remove('fa-xmark');
+        };
+      });
+    });
+  </script>
+</body>
+</html>
